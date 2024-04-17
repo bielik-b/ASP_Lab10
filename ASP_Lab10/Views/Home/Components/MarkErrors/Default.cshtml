@@ -1,0 +1,11 @@
+﻿@model IEnumerable<string>
+<body>
+    <h6 class="display-6" style="color:red">Error:</h6>
+    @foreach (var error in Model)
+    {
+        <div class="text-center">
+            <label style="color:red; font-size: 20px"><b>@error</b></label>
+        </div>
+    }
+</body>
+

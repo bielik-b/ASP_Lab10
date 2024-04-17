@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Subjects";
+    int counter = 1;
+}
+@model IEnumerable<Subject>
+<html>
+<head>
+    <title>
+        @ViewData["Title"]
+    </title>
+</head>
+<body>
+    <div class="text-center">
+        <h2 class="display-4">
+            Subjects available
+        </h2>
+    </div>
+    <table class="table table-striped" style="width: 40%; margin: auto">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Subject</th>
+                <th scope="col">Contains</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var subject in Model)
+            {
+                <tr>
+                    <th scope="row">@counter</th>
+                    <th>@subject.Name</th>
+                    <th>@subject.Contains</th>
+                </tr>
+                counter++;
+            }
+        </tbody>
+    </table>
+</body>
+</html>

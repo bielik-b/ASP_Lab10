@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Confirmation";
+}
+@model Consultation
+<html>
+<head>
+    <title>
+        @ViewData["Title"]
+    </title>
+</head>
+<body>
+    <div class="text-center">
+        <h2 class="display-4">
+            Registration successful!
+        </h2>
+        <div class="col">
+            <label class="display-6">Date: <b>@Model.Date.ToShortDateString()</b></label>
+        </div>
+        <div class="col">
+            <label class="display-6">Subject: <b>@Model.Subject</b></label>
+        </div>
+    </div>
+</body>
+</html>
